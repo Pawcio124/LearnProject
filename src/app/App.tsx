@@ -2,6 +2,7 @@ import { Routes, Route, Navigate, Link } from "react-router-dom";
 import { AppBar, Box, Button, Toolbar } from "@material-ui/core";
 import HomePage from "../HomePage/HomePage";
 import ToDos from "../ToDos/ToDos";
+import ToDosS from "../ToDosSlice/ToDosS";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <Box padding={2} flex={1} overflow={"auto"}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/toDos" element={<ToDos />} />
+          {/* <Route path="/toDos" element={<ToDos />} /> */}
+          <Route path="/toDos" element={<ToDosS />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Box>
